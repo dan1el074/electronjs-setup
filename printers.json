@@ -1,0 +1,17 @@
+[
+  {
+    "deviceId": "OneNote for Windows 10",
+    "name": "OneNote for Windows 10",
+    "paperSizes": ["Carta", "A4"]
+  },
+  {
+    "deviceId": "Microsoft Print to PDF",
+    "name": "Microsoft Print to PDF",
+    "paperSizes": ["Carta", "Tabl�ide", "Of�cio", "Extrato"]
+  },
+  {
+    "deviceId": "Fax",
+    "name": "Fax",
+    "paperSizes": ["Carta", "Carta pequeno", "Of�cio", "Extrato"]
+  }
+]

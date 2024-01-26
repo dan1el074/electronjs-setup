@@ -7,8 +7,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Hello World</h1>
-    </div>
+    <section class="container">
+      <h1>Selecione o caminho da pasta:</h1>
+      <form method="post">
+        <input
+          type="text"
+          name="file-address"
+          id="file-address"
+          value="\\metaro-server\Projetos"
+        />
+        <button type="submit" class="btn">Selecionar</button>
+      </form>
+
+      <button class="btn next" id="btn-next">Next ></button>
+    </section>
+    <section class="action" id="action-window">
+      <form>
+        <label for="printer">Selecione uma impressora:</label>
+        <select name="printers" id="printers">
+          <option value="">Selecione uma impressora:</option>
+        </select>
+      </form>
+    </section>
+
+    <script src="../src/btnNextAction.js"></script>
   </body>
 </html>
