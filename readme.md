@@ -1,4 +1,4 @@
-# JS Desktop application
+# JS desktop application
 
 Setup completo, basta dar um `npm install` e usar!
 
