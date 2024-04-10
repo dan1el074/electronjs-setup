@@ -1,6 +1,4 @@
-const { getPrinters } = require("pdf-to-printer/dist/bundle.js");
 const { app, BrowserWindow } = require("electron/main");
-const fs = require("fs");
 const path = require("node:path");
 
 app.whenReady().then(() => {
@@ -11,8 +9,6 @@ app.whenReady().then(() => {
       createWindow();
     }
   });
-
-  getPrinters().then(printersAvailable);
 });
 
 app.on("window-all-closed", () => {
@@ -22,7 +18,7 @@ app.on("window-all-closed", () => {
 });
 
 function createWindow() {
-  const win = new BrowserWindow({
+  const window = new BrowserWindow({
     width: 600,
     height: 400,
     darkTheme: true,
@@ -31,19 +27,5 @@ function createWindow() {
     },
   });
 
-  win.loadFile("./assets/index.html");
-
-  ipcMain.on("make-window-opaque", () => appWin.setOpacity(1));
-}
-
-function printersAvailable(printersArray) {
-  let jsonData = printersArray;
-
-  fs.writeFile("printers.json", JSON.stringify(jsonData), (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log("Arquivo gravado com sucesso!");
-  });
+  window.loadFile("./src/pages/index.html");
 }
